@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadCrewMembers() {
-    // Simulated crew data - replace with actual data fetching in a real application
+    
     crewMembers = [
         { id: 1, name: 'John Doe', position: 'driver', status: 'offduty' },
         { id: 2, name: 'Jane Smith', position: 'conductor', status: 'offduty' },
-        { id: 3, name: 'Mike Johnson', position: 'driver', status: 'offduty' },
+        { id: 3, name: 'Mike Johnson', position: 'driver', status: 'onduty' },
         { id: 4, name: 'Sarah Brown', position: 'conductor', status: 'offduty' },
         { id: 5, name: 'Tom Wilson', position: 'driver', status: 'offduty' }
     ];
@@ -159,7 +159,7 @@ function handleCrewAction(event) {
 function handleTeamAction(event) {
     if (event.target.classList.contains('delete-team')) {
         const teamIndex = event.target.dataset.index;
-        if (confirm('Are you sure you want to delete this crew team?')) {
+        if (confirm('Are you sure.. do you want to delete this crew team?')) {
             crewTeams.splice(teamIndex, 1);
             updateCrewTeamsTable();
         }
