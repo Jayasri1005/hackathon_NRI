@@ -8,6 +8,7 @@ const session = require('express-session');
 const path = require('path');
 
 // Load environment variables
+// thiss is hackathon project 
 dotenv.config();
 
 // Initialize app
